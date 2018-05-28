@@ -1,0 +1,18 @@
+.hidden
+  #popup-info.popup
+    b телефон
+    a(href='tel:8 (000) 123-45-67') 8 (000) 123-45-67
+    b почта
+    a(href='mailto:andrey@ethnoevent.ru') andrey@ethnoevent.ru
+    a.popup-order(href='index.html#popup-order') Заказать звонок
+  #popup-order.popup
+    form(action='')
+      .popup-input
+        input(type='text')
+        span Имя
+      .popup-input
+        input(type='tel')
+        span Телефон
+      span Время звонка
+      #popup-range
+      button Отправить

@@ -1,0 +1,268 @@
+/* Default custom select styles
+
+div.cs-select
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  text-align: left
+  background: #fff
+  z-index: 100
+  width: 100%
+  max-width: 500px
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  &:focus
+    outline: none
+    /* For better accessibility add a style for this in your skin
+
+.cs-select
+  select
+    display: none
+  span
+    display: block
+    position: relative
+    cursor: pointer
+    //padding: 1vw;
+    /*white-space: nowrap;
+     *overflow: hidden;
+     *text-overflow: ellipsis;
+    margin-right: 0
+  > span
+    padding-right: 0
+    &::after
+      speak: none
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      transform: translateY(-50%)
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+  .cs-selected span::after
+    speak: none
+    position: absolute
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  .cs-options
+    position: absolute
+    overflow: hidden
+    width: 100%
+    background: #fff
+    visibility: hidden
+  &.cs-active .cs-options
+    visibility: visible
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    width: 100%
+    span
+      padding: 1vw
+    li.cs-focus span
+      background-color: #ddd
+  li.cs-optgroup
+    ul
+      padding-left: 1vw
+    > span
+      cursor: default
+
+/* Placeholder and selected option
+
+/*.cs-select > span::after {
+ *  content: '\25BE';
+ *  right: 1vw;
+ *}
+ *
+ *.cs-select .cs-selected span::after {
+ *  content: '\2713';
+ *  margin-left: 1vw;
+ *}
+ *
+ *.cs-select.cs-active > span::after {
+ *  -webkit-transform: translateY(-50%) rotate(180deg);
+ *  transform: translateY(-50%) rotate(180deg);
+ *}
+
+/* Options
+
+/* Optgroup and optgroup label
+
+div.cs-skin-slide
+  color: #864bff
+  font-size: 1.3vw
+  width: 12vw
+  letter-spacing: 0.075em
+  &.active .cs-select.cs-skin-slide
+    &:before
+      background: #864bff
+    > span
+      color: #fff
+      text-transform: uppercase
+
+@media screen and (max-width: 30vw)
+  div.cs-skin-slide
+    font-size: 1vw
+    width: 200px
+
+.cs-select div.cs-select.cs-skin-slide::before
+  content: ''
+  background: #fff
+  cursor: pointer
+  display: inline-block
+  width: 100%
+  -webkit-border-radius: 20px
+  -moz-border-radius: 20px
+  border-radius: 20px
+  color: #864bff
+  border: 3px solid #864bff
+  font-size: 20px
+  font-family: 'GeometricaSans-Black'
+  text-transform: uppercase
+  vertical-align: middle
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  letter-spacing: 0.075vw
+  text-align: center
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: -3px
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transition: -webkit-transform 0.3s
+  transition: transform 0.3s
+
+/*.cs-skin-slide.cs-active::before {
+ *  -webkit-transform: scale3d(1.1,3.5,1);
+ *  transform: scale3d(1.1,3.5,1);
+ *  border-radius: 0;
+ *  background: #864bff;
+ *}
+
+.cs-skin-slide
+  &.cs-active
+    color: #fff
+    > span
+      text-indent: -290px
+      opacity: 0
+      &::after
+        -webkit-transform: translate3d(0, -50%, 0)
+        transform: translate3d(0, -50%, 0)
+  > span
+    text-align: center
+    height: 36px
+    line-height: 40px
+    -webkit-transition: text-indent 0.3s, opacity 0.3s
+    transition: text-indent 0.3s, opacity 0.3s
+    text-transform: uppercase
+    font-family: GeometricaSans-Black
+  .cs-options
+    -webkit-transition: all .3s ease
+    -moz-transition: all .3s ease
+    -ms-transition: all .3s ease
+    -o-transition: all .3s ease
+    transition: all .3s ease
+    overflow: visible
+    background: transparent
+    width: 100%
+    padding: 0
+    top: 50%
+    left: 50%
+    -webkit-transform: translate3d(-50%, -50%, 0)
+    transform: translate3d(-50%, -50%, 0)
+    li
+      opacity: 0
+      -webkit-transform: translate3d(30%, 0, 0)
+      transform: translate3d(30%, 0, 0)
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s
+      transition: transform 0.3s, opacity 0.3s
+  &.cs-active .cs-options
+    li
+      -webkit-transform: translate3d(0, 0, 0)
+      transform: translate3d(0, 0, 0)
+      opacity: 1
+    background: #864bff
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+    -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+  .cs-options li span
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: 2px
+    line-height: 1.2
+    font-size: 65%
+    padding: 0.8vw 1vw 0.8vw 1vw
+    font-family: Gilroy-ExtraBold
+  .cs-selected span::after
+    content: ''
+
+/*.cs-skin-slide > span::after,
+ *.cs-skin-slide.cs-active > span::after {
+ *  font-family: 'icomoon';
+ *  content: '\e00f';
+ *  color: #eb7e7f;
+ *  -webkit-backface-visibility: hidden;
+ *  backface-visibility: hidden;
+ *}
+
+@media screen and (max-width: 30vw)
+  .cs-skin-slide .cs-options
+    padding-top: 3vw
+
+[class^="icon-"] span:before, [class*=" icon-"] span:before
+  font-family: 'icomoon'
+  position: absolute
+  left: 0
+  top: 50%
+  -webkit-transform: translate3d(0, -50%, 0)
+  transform: translate3d(0, -50%, 0)
+  font-size: 1.2vw
+
+.icon-camera span::before
+  content: '\e00b'
+
+.icon-money span::before
+  content: '\e008'
+
+.icon-heart span::before
+  content: '\e00a'
+
+.icon-food span::before
+  content: '\e009'
+
+.icon-shirt span::before
+  content: '\e00c'
+
+.cs-skin-slide .cs-options li.active
+  background: #fff
+  color: #864bff
+
+.cs-country
+  margin-right: 20px
+
+.contacts-right
+  .cs-select div.cs-select.cs-skin-slide::before
+    width: 100%
+    border: none
+    border-bottom: 3px solid #864bff
+    border-radius: 0
+  div.cs-skin-slide
+    width: 100%
+    margin-bottom: 25px
+    max-width: 100%
+  .cs-skin-slide
+    &.cs-active .cs-options li
+      height: 36px
+    .cs-options li span
+      color: #fff
+      text-transform: none
