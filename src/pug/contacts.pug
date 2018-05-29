@@ -1,0 +1,51 @@
+---
+title: Contacts title
+bodyClass: homepage
+---
+extends shared/_layout
+block content
+
+  // section
+  .front-buner(data-parallax='scroll', data-image-src='img/front-bg.jpg')
+    h1.front-buner-title
+      | Контакты
+  // section
+  .contacts
+    .contacts-content
+      .contacts-left
+        h2
+          | БУДЬ 
+          br
+          | ВСЕГДА 
+          br
+          | НА СВЯЗИ
+        a(href='tel:8 (495) 123-45-67')
+          span
+          | 8 (495) 123-45-67
+        a(href='mailto:info@ethnoevent.ru')
+          span
+          | info@ethnoevent.ru
+      .contacts-right
+        form(action='')
+          .popup-input
+            input(type='text')
+            span Имя
+          .popup-input
+            input(type='email')
+            span Почта
+          .popup-input
+            input(type='text')
+            span Телефон
+          .cs-select.cs-skin-slide.cs-select-socials(tabindex='0')
+            select.cs-select.cs-skin-slide
+              option(value='Звонок') Звонок
+              option(value='Почта') Почта
+              option(value='СМС') СМС
+              option(value='WhatsApp') WhatsApp
+              option(value='Telegram') Telegram
+              option(value='Viber') Viber
+          .popup-input
+            textarea(name='')
+            span Сообщение
+          button отправить
+    .clear

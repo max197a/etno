@@ -1,0 +1,198 @@
+---
+title: Works title
+bodyClass: homepage
+---
+extends shared/_layout
+block content
+
+  // section
+  .front-buner(data-parallax='scroll', data-image-src='img/front-bg.jpg')
+    h1.front-buner-title
+      | Контакты
+  // section
+  .hidden
+    #filter-popup.filter-popup.main-news
+      form(action='')
+        .filter-popup-col
+          p.filter-popup-col-title Страны
+          ul
+            li
+              input(id='checkАфрика', name='country[]', value='Африка', type='checkbox')
+              label(for='checkАфрика') Африка
+            li
+              input(id='checkВосток', name='country[]', value='Восток', type='checkbox')
+              label(for='checkВосток') Восток
+            li
+              input(id='checkЕвропа', name='country[]', value='Европа', type='checkbox')
+              label(for='checkЕвропа') Европа
+            li
+              input(id='checkИндия', name='country[]', value='Индия', type='checkbox')
+              label(for='checkИндия') Индия
+            li
+              input(id='checkКитай', name='country[]', value='Китай', type='checkbox')
+              label(for='checkКитай') Китай
+            li
+              input(id='checkКорея', name='country[]', value='Корея', type='checkbox')
+              label(for='checkКорея') Корея
+            li
+              input(id='checkМексика', name='country[]', value='Мексика', type='checkbox')
+              label(for='checkМексика') Мексика
+            li
+              input(id='checkРоссия', name='country[]', value='Россия', type='checkbox')
+              label(for='checkРоссия') Россия
+            li
+              input(id='checkСевер', name='country[]', value='Север', type='checkbox')
+              label(for='checkСевер') Север
+            li
+              input(id='checkЯпония', name='country[]', value='Япония', type='checkbox')
+              label(for='checkЯпония') Япония
+        .filter-popup-col
+          p.filter-popup-col-title Мероприятия
+          ul
+            li
+              input(id='checkСвадьба', name='event[]', value='Свадьба', type='checkbox')
+              label(for='checkСвадьба') Свадьба
+            li
+              input(id='checkДень Рождения', name='event[]', value='День Рождения', type='checkbox')
+              label(for='checkДень Рождения') День Рождения
+            li
+              input(id='checkКорпоратив', name='event[]', value='Корпоратив', type='checkbox')
+              label(for='checkКорпоратив') Корпоратив
+            li
+              input(id='checkСъемка', name='event[]', value='Съемка', type='checkbox')
+              label(for='checkСъемка') Съемка
+        .filter-popup-col
+          p.filter-popup-col-title Услуги
+          ul
+            li
+              input#check22(name='service[]', value='22', type='checkbox')
+              label(for='check22') Аренда костюмов
+            li
+              input#check28(name='service[]', value='28', type='checkbox')
+              label(for='check28') Леди-фуршет
+            li
+              input#check29(name='service[]', value='29', type='checkbox')
+              label(for='check29') Магический салон
+            li
+              input#check30(name='service[]', value='30', type='checkbox')
+              label(for='check30') Мастер-классы
+            li
+              input#check31(name='service[]', value='31', type='checkbox')
+              label(for='check31') Фотосалон
+            li
+              input#check32(name='service[]', value='32', type='checkbox')
+              label(for='check32') Фуршет
+            li
+              input#check33(name='service[]', value='33', type='checkbox')
+              label(for='check33') Хостес
+            li
+              input#check34(name='service[]', value='34', type='checkbox')
+              label(for='check34') Чилаут
+            li
+              input#check37(name='service[]', value='37', type='checkbox')
+              label(for='check37') Барабанное шоу
+            li
+              input#check38(name='service[]', value='38', type='checkbox')
+              label(for='check38') Ведущие
+            li
+              input#check39(name='service[]', value='39', type='checkbox')
+              label(for='check39') Музыканты
+            li
+              input#check40(name='service[]', value='40', type='checkbox')
+              label(for='check40') Танцевальное шоу
+            li
+              input#check41(name='service[]', value='41', type='checkbox')
+              label(for='check41') Шоу боевых искусств
+            li
+              input#check42(name='service[]', value='42', type='checkbox')
+              label(for='check42') Шоу на открытие
+        .clear
+        button.single-buy Подобрать
+  .main-news.main-news-search.main-news-works
+    form.search(action='')
+      button
+      .popup-input
+        input(type='text', name='search', value='')
+        span ПОИСК
+    a.filter.single-buy(href='#filter-popup') Фильтр
+  .main-news
+    a.main-news-item(href='#')
+      .main-news-item-img(style="background-image: url('img/list1.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Китайский новый год
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corpori...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item(href='#')
+      .main-news-item-img(style="background-image: url('img/list2.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Китайский новый год совсем скоро
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corpori...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item(href='#')
+      .main-news-item-img(style="background-image: url('img/list3.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Китайский новый год
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corpori...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item(href='#')
+      .main-news-item-img(style="background-image: url('img/list4.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Китайский новый год
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corpori...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item.large(href='#')
+      .main-news-item-img(style="background-image: url('img/list5.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Японская ночь искусств
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corporis voluptatum quae molestias laboriosam alias maxime provident iste numquam earum molestiae sunt...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item.large(href='#')
+      .main-news-item-img(style="background-image: url('img/list5.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Японская ночь искусств
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corporis voluptatum quae molestias laboriosam alias maxime provident iste numquam earum molestiae sunt...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    a.main-news-item(href='#')
+      .main-news-item-img(style="background-image: url('img/list4.jpg')")
+      .main-news-item-content
+        span.main-news-item-title
+          | Китайский новый год
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id libero corpori...
+        span.main-news-item-date
+          i.fa.fa-clock-o(aria-hidden='true')
+          |  18 июля 2017
+    .clear
+    //- nav.navigation.pagination(role='navigation')
+    //-   h2.screen-reader-text Навигация по записям
+    //-   .nav-links
+    //-     span.page-numbers.current(aria-current='page') 1
+    //-     a.page-numbers(href='page/2/index.html') 2
+    //-     a.next.page-numbers(href='page/2/index.html') >
+    //- .clear
+    a.main-all-link.load-more(href='', data-page='57', data-offset='8', data-categoryin='', data-cat='') далее
+  .clear

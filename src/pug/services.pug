@@ -1,0 +1,34 @@
+---
+title: Services title
+bodyClass: homepage
+---
+extends shared/_layout
+block content
+
+  // section
+  .front-buner(data-parallax='scroll', data-image-src='img/front-bg.jpg')
+    h1.front-buner-title
+      | Услуги
+  // section
+  .main-news
+    .country-item(style="background: url('img/services-1.jpg') no-repeat center / cover")
+      h2 Проекты
+      a(href='#') подробнее
+    .country-item(style="background: url('img/services-2.jpg') no-repeat center / cover")
+      h2
+        | Встреча
+        br
+        | гостей
+      a(href='#') подробнее
+    .country-item(style="background: url('img/services-3.jpg') no-repeat center / cover")
+      h2
+        | Шоу
+        br
+        | программы
+      a(href='#') подробнее
+    .country-item(style="background: url('img/services-4.jpg') no-repeat center / cover")
+      h2
+        | Аренда
+        br
+        | костюмов
+      a(href='#') подробнее

@@ -136,7 +136,7 @@ header
     font-size: 30px
     background-color: #864bff
     line-height: 55px
-    border: 3px solid #864bff
+    // border: 3px solid #864bff
     padding: 0 50px
     -webkit-border-radius: 30px
     -moz-border-radius: 30px
@@ -152,6 +152,12 @@ header
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
     -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+
+    background: rgb(243,73,76)
+    background: -moz-linear-gradient(left, rgba(243,73,76,1) 0%, rgba(177,43,55,1) 100%)
+    background: -webkit-linear-gradient(left, rgba(243,73,76,1) 0%,rgba(177,43,55,1) 100%)
+    background: linear-gradient(to right, rgba(243,73,76,1) 0%,rgba(177,43,55,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3494c', endColorstr='#b12b37',GradientType=1 )
 
 .country-item a
   color: #fff
@@ -180,7 +186,7 @@ header
   margin-top: 25px
   &:hover
     background-color: #6e3ed0
-    border: 3px solid #6e3ed0
+    // border: 3px solid #6e3ed0
     -webkit-box-shadow: none
     -moz-box-shadow: none
     box-shadow: none
@@ -218,7 +224,7 @@ header
     top: 0
     height: 120px
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.15)
-    display: none
+    display: block
     /* -webkit-transition: background-color 0.3s;
      *-moz-transition: background-color 0.3s;
      *-ms-transition: background-color 0.3s;
@@ -231,6 +237,26 @@ header
     transition: none !important
     &.menu-fixed-show
       display: block
+    .menu-order svg
+      position: absolute
+      left: 0
+      top: 0
+      width: 55px
+      height: 58px
+      fill: #864bff
+      transition: all 0.3s ease-in-out
+      &:hover
+        -webkit-transition: fill 0.3s
+        -moz-transition: fill 0.3s
+        -ms-transition: fill 0.3s
+        -o-transition: fill 0.3s
+        transition: fill 0.3s
+    .menu-cart svg:hover
+      -webkit-transition: fill 0.3s
+      -moz-transition: fill 0.3s
+      -ms-transition: fill 0.3s
+      -o-transition: fill 0.3s
+      transition: fill 0.3s
   ul
     margin: 0 auto
     padding: 0
@@ -282,27 +308,6 @@ header
     &:nth-child(2)
       /*fill: #e54b4b;
       opacity: 1
-
-.menu-fixed-show
-  .menu-order svg
-    position: absolute
-    left: 0
-    top: 0
-    width: 55px
-    height: 58px
-    fill: #864bff
-    &:hover
-      -webkit-transition: fill 0.3s
-      -moz-transition: fill 0.3s
-      -ms-transition: fill 0.3s
-      -o-transition: fill 0.3s
-      transition: fill 0.3s
-  .menu-cart svg:hover
-    -webkit-transition: fill 0.3s
-    -moz-transition: fill 0.3s
-    -ms-transition: fill 0.3s
-    -o-transition: fill 0.3s
-    transition: fill 0.3s
 
 .menu-order svg:nth-child(2)
   opacity: 0
@@ -462,7 +467,7 @@ header
       box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 1)
     &.slick-active button, button:hover
       background-color: transparent
-      border: 5px solid #864bff
+      border: 5px solid #ff4e50
       width: 20px
       height: 20px
       -webkit-transform: scale(1.5)
@@ -477,7 +482,7 @@ header
 
 .main-desc
   background-color: #864bff
-  padding: 300px 0
+  padding: 200px 0 150px
   text-align: center
   background: url("../img/second.jpg") no-repeat (center / cover)
   > span
@@ -502,6 +507,27 @@ header
     margin-top: 0
     margin-bottom: 0
     font-family: 'Gilroy-Light'
+    max-width: 1260px
+    margin: 0 auto
+  a.btn
+    color: #fff
+    text-transform: uppercase
+    font-size: 30px
+    background-color: #864bff
+    line-height: 55px
+    border: 3px solid #864bff
+    padding: 0 50px
+    border-radius: 30px
+    display: inline-block
+    font-family: 'GeometricaSans-Black'
+    text-shadow: none
+    transition: all 0.3s
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+    margin: 120px auto 0
+    &:hover
+      background-color: #6e3ed0
+      border: 3px solid #6e3ed0
+      box-shadow: none
 
 .main-news
   margin: auto
@@ -526,10 +552,10 @@ header
   margin-left: 20px
   margin-right: 20px
   height: 37vw
-  //max-height: 100vh;
-  -webkit-border-radius: 20px
-  -moz-border-radius: 20px
-  border-radius: 20px
+  // max-height: 100vh;
+  // -webkit-border-radius: 20px
+  // -moz-border-radius: 20px
+  // border-radius: 20px
   position: relative
   margin-bottom: 50px
   /*-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
@@ -562,11 +588,11 @@ header
   -ms-transition: all 0.4s
   -o-transition: all 0.4s
   transition: all 0.4s
-  -webkit-transform: translate3d(0, 0, 0)
-  -moz-transform: translate3d(0, 0, 0)
-  -ms-transform: translate3d(0, 0, 0)
-  -o-transform: translate3d(0, 0, 0)
-  transform: translate3d(0, 0, 0)
+  // -webkit-transform: translate3d(0, 0, 0)
+  // -moz-transform: translate3d(0, 0, 0)
+  // -ms-transform: translate3d(0, 0, 0)
+  // -o-transform: translate3d(0, 0, 0)
+  // transform: translate3d(0, 0, 0)
 
 .main-news-item-content
   background-color: #fff
@@ -586,29 +612,27 @@ header
   -ms-transition: all 0.4s
   -o-transition: all 0.4s
   transition: all 0.4s
-  -webkit-border-radius: 0 0 20px 20px
-  -moz-border-radius: 0 0 20px 20px
-  border-radius: 0 0 20px 20px
-  -webkit-transform: translate3d(0, 100%, 0)
-  -moz-transform: translate3d(0, 100%, 0)
-  -ms-transform: translate3d(0, 100%, 0)
-  -o-transform: translate3d(0, 100%, 0)
-  transform: translate3d(0, 100%, 0)
+  opacity: 1
+  -webkit-transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0)
+  -ms-transform: translate3d(0, 0, 0)
+  -o-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
 
-.main-news-item:hover
-  .main-news-item-content
-    opacity: 1
-    -webkit-transform: translate3d(0, 0, 0)
-    -moz-transform: translate3d(0, 0, 0)
-    -ms-transform: translate3d(0, 0, 0)
-    -o-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-  .main-news-item-img
-    -webkit-transform: translate3d(0, -100px, 0)
-    -moz-transform: translate3d(0, -100px, 0)
-    -ms-transform: translate3d(0, -100px, 0)
-    -o-transform: translate3d(0, -100px, 0)
-    transform: translate3d(0, -100px, 0)
+// .main-news-item:hover
+//   .main-news-item-content
+//     opacity: 1
+//     -webkit-transform: translate3d(0, 0, 0)
+//     -moz-transform: translate3d(0, 0, 0)
+//     -ms-transform: translate3d(0, 0, 0)
+//     -o-transform: translate3d(0, 0, 0)
+//     transform: translate3d(0, 0, 0)
+//   .main-news-item-img
+//     -webkit-transform: translate3d(0, -100px, 0)
+//     -moz-transform: translate3d(0, -100px, 0)
+//     -ms-transform: translate3d(0, -100px, 0)
+//     -o-transform: translate3d(0, -100px, 0)
+//     transform: translate3d(0, -100px, 0)
 
 .main-news-item-title
   font-family: 'Gilroy-ExtraBold'
@@ -682,6 +706,11 @@ header
     transform: translate(-50%, -50%)
     max-width: 100%
     max-height: 100%
+    opacity: 0.75
+    transition: all 0.3s ease-in-out
+  &:hover
+    img
+      opacity: 1
 
 .main-all-link
   color: #fff
@@ -1300,8 +1329,9 @@ footer
 .front-buner
   width: 100%
   height: 60vh
-  min-height: 350px
+  min-height: 530px
   position: relative
+  background: url(../img/front-bg.jpg) center center no-repeat
 
 .front-buner-title
   font-size: 6vw
@@ -1315,7 +1345,9 @@ footer
   right: 0
   text-align: center
   z-index: 10
-
+.contacts
+  background: url(../img/circles.png) center center no-repeat
+  background-size: cover
 .contacts-content
   width: 85%
   margin: 80px auto
@@ -1323,6 +1355,7 @@ footer
 .contacts-left
   width: 50%
   float: left
+  // padding-bottom: 80px
   h2
     font-size: 6vw
     color: #864bff
@@ -1360,6 +1393,7 @@ footer
   float: right
   width: 50%
   text-align: center
+  padding-bottom: 80px
   form
     max-width: 720px
     width: 100%
@@ -1662,7 +1696,7 @@ h1, h2, h3
   letter-spacing: 0.075em
 
 .filter, .filter-right
-  float: right
+  float: left
   margin: auto
 
 .filter-popup
@@ -1817,9 +1851,9 @@ h1, h2, h3
     text-transform: uppercase
     color: #fff
     text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
-  &:nth-of-type(even) h2
-    text-align: right
-    padding-right: 40px
+  // &:nth-of-type(even) h2
+  //   text-align: right
+  //   padding-right: 40px
   &:first-of-type
     margin-top: 0
   &:last-of-type
@@ -1830,12 +1864,12 @@ h1, h2, h3
     right: initial !important
     float: left
     bottom: 10vh
-  &:nth-of-type(even) a
-    left: initial !important
-    right: 40px !important
+  // &:nth-of-type(even) a
+  //   left: initial !important
+  //   right: 40px !important
 
 .search
-  float: left
+  float: right
   button
     height: 60px
     width: 60px
